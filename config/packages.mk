@@ -43,6 +43,13 @@ PRODUCT_PACKAGES += \
     OmniJaws \
     WeatherIcons
 
+# QS tile styles
+PRODUCT_PACKAGES += \
+    QStileCircleTrim \
+    QStileDefault \
+    QStileDualToneCircle \
+    QStileSquircleTrim
+
 ifeq ($(ANCIENT_GAPPS), true)
 PRODUCT_PACKAGES += \
     PixelLiveWallpaperPrebuilt
