@@ -53,7 +53,8 @@ PRODUCT_PACKAGES += \
     QStileDottedCircle \
     QStileNinja \
     QStilePokesign \
-    QStileWavey
+    QStileWavey \
+    QStileSquaremedo
 
 ifeq ($(ANCIENT_GAPPS), true)
 PRODUCT_PACKAGES += \
