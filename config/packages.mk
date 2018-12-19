@@ -54,7 +54,8 @@ PRODUCT_PACKAGES += \
     QStileNinja \
     QStilePokesign \
     QStileWavey \
-    QStileSquaremedo
+    QStileSquaremedo \
+    QStileInkDrop
 
 ifeq ($(ANCIENT_GAPPS), true)
 PRODUCT_PACKAGES += \
