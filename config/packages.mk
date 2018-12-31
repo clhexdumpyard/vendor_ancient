@@ -71,3 +71,8 @@ ifeq ($(ANCIENT_GAPPS), true)
 PRODUCT_PACKAGES += \
     PixelLiveWallpaperPrebuilt
 endif
+
+# Cutout control overlays
+PRODUCT_PACKAGES += \
+    HideCutout \
+    StatusBarStock
