@@ -56,7 +56,8 @@ PRODUCT_PACKAGES += \
     QStileWavey \
     QStileSquaremedo \
     QStileInkDrop \
-    QStileCookie
+    QStileCookie \
+    QStileCircleOutline
 
 ifeq ($(ANCIENT_GAPPS), true)
 PRODUCT_PACKAGES += \
