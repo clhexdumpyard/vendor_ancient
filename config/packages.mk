@@ -57,7 +57,12 @@ PRODUCT_PACKAGES += \
     QStileSquaremedo \
     QStileInkDrop \
     QStileCookie \
-    QStileCircleOutline
+    QStileCircleOutline \
+    QStileCosmos \
+    QStileDividedCircle \
+    QStileNeonLight \
+    QStileOxygen \
+    QStileTriangles
 
 ifeq ($(ANCIENT_GAPPS), true)
 PRODUCT_PACKAGES += \
