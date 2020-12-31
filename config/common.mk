@@ -165,8 +165,8 @@ endif
 # Customization
 #include vendor/google-customization/config.mk
 
-# Pixelstyle
-include vendor/pixelstyle/config.mk
+# AncientUI
+include vendor/ancientui/config.mk
 
 # Prebuilts
 include vendor/prebuilts/config.mk
