@@ -64,6 +64,18 @@ PRODUCT_PACKAGES += \
     QStileOxygen \
     QStileTriangles
 
+# Statusbar height
+PRODUCT_PACKAGES += \
+    SbHeightDefault \
+    SbHeight35 \
+    SbHeight50
+
+# Rounded
+PRODUCT_PACKAGES += \
+    DgCorner \
+    DgCorner1 \
+    DgCorner20
+
 ifeq ($(ANCIENT_GAPPS), true)
 PRODUCT_PACKAGES += \
     PixelLiveWallpaperPrebuilt
