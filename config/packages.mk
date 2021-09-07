@@ -45,7 +45,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CustomDoze \
     Eleven \
-    OmniStyle \
     Launcher3QuickStep \
     ThemePicker \
     TouchGestures \
@@ -54,6 +53,14 @@ PRODUCT_PACKAGES += \
     StitchImage \
     OmniJaws \
     WeatherIcons
+
+ifeq ($(ANCIENT_WEEABO), true)
+PRODUCT_PACKAGES += \
+    weebstyle 
+else
+PRODUCT_PACKAGES += \
+    OmniStyle
+endif
 
 ifeq ($(ANCIENT_GAPPS), true)
 PRODUCT_PACKAGES += \
