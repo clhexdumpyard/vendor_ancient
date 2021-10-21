@@ -171,11 +171,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.input.video_enabled=false \
     persist.sys.binary_xml=false
 
-# Blur
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.sf.blurs_are_expensive=1 \
-    ro.surface_flinger.supports_background_blur=1
-
 # Enable support of one-handed mode
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
