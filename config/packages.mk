@@ -49,6 +49,7 @@ PRODUCT_PACKAGES += \
     Eleven \
     GamingMode \
     Launcher3QuickStep \
+    QuickAccessWallet \
     ThemePicker \
     TouchGestures \
     Recorder \
