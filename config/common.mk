@@ -126,6 +126,9 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 # Enable ccache
 USE_SYSTEM_CCACHE := true
 
+# Sepolicy
+SELINUX_IGNORE_NEVERALLOWS := true
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
