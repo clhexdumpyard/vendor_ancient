@@ -1,6 +1,6 @@
 ifndef ANCIENT_BUILD_TYPE
     ifeq ($(ANCIENT_WEEABO), true)
-    ANCIENT_BUILD_TYPE := Lucy_Heartfillia
+    ANCIENT_BUILD_TYPE := Sasuke
     else
     ANCIENT_BUILD_TYPE := Copper
     endif
@@ -34,7 +34,7 @@ ifeq ($(ANCIENT_OFFICIAL), true)
     ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
       IS_OFFICIAL=true
       ifeq ($(ANCIENT_WEEABO), true)
-      ANCIENT_BUILD_TYPE := Rias_Gremory
+      ANCIENT_BUILD_TYPE := Naruto
       else
       ANCIENT_BUILD_TYPE := Iron
       endif
@@ -46,7 +46,7 @@ endif
     endif
     ifneq ($(IS_OFFICIAL), true)
        ifeq ($(ANCIENT_WEEABO), true)
-       ANCIENT_BUILD_TYPE := Lucy_Heartfillia
+       ANCIENT_BUILD_TYPE := Sasuke
        else
        ANCIENT_BUILD_TYPE := Copper
        endif
