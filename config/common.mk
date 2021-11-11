@@ -159,7 +159,7 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 include vendor/ancient/config/branding.mk
 
 # Overlays
-#include vendor/overlays/config.mk
+include vendor/overlays/config.mk
 
 # Variant
 ifeq ($(ANCIENT_GAPPS), true)
