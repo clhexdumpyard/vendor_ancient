@@ -55,14 +55,7 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Pixel permissions
-PRODUCT_COPY_FILES += \
-   vendor/ancient/config/permissions/pixel/android.hardware.camera.ar.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.camera.ar.xml \
-   vendor/ancient/config/permissions/pixel/android.hardware.gamepad.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.gamepad.xml \
-   vendor/ancient/config/permissions/pixel/android.hardware.vr.high_performance.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.vr.high_performance.xml \
-   vendor/ancient/config/permissions/pixel/com.google.android.dialer.support.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.google.android.dialer.support.xml \
-   vendor/ancient/config/permissions/pixel/google_build.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/google_build.xml \
-   vendor/ancient/config/permissions/pixel/nexus.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/nexus.xml \
-   vendor/ancient/config/permissions/pixel/pixel_2016_exclusive.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/pixel_2016_exclusive.xml
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/ancient/config/permissions/pixel,$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig)
 
 # Some permissions
 PRODUCT_COPY_FILES += \
