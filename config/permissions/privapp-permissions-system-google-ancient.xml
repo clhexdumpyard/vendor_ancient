@@ -100,4 +100,8 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.REQUEST_NOTIFICATION_ASSISTANT_SERVICE" />
     </privapp-permissions>
 
+    <privapp-permissions package="com.google.android.settings.intelligence.IntelligenceApplication">
+        <permission name="android.permission.READ_DEVICE_CONFIG"/>
+    </privapp-permissions>
+
 </permissions>
