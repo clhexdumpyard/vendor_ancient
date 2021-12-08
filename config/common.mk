@@ -164,8 +164,7 @@ endif
 # Disable touch video heatmap to reduce latency, motion jitter, and CPU usage
 # on supported devices with Deep Press input classifier HALs and models
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.input.video_enabled=false \
-    persist.sys.binary_xml=false
+    ro.input.video_enabled=false
 
 # Enable support of one-handed mode
 PRODUCT_PRODUCT_PROPERTIES += \
