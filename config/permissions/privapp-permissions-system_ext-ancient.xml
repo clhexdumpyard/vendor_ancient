@@ -138,6 +138,7 @@ privileged Google applications in GMS devices.
         <permission name="android.permission.REBOOT" />
         <permission name="android.permission.RECOVERY" />
         <permission name="android.permission.CHANGE_CONFIGURATION" />
+        <permission name="android.permission.PREVENT_POWER_KEY"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.android.settings">
