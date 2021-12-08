@@ -60,7 +60,6 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/ancient/config/perm
 # Some permissions
 PRODUCT_COPY_FILES += \
     vendor/ancient/config/permissions/ancient-sysconfig.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/ancient-sysconfig.xml \
-    vendor/ancient/config/permissions/backup.xml:system/etc/sysconfig/backup.xml \
     vendor/ancient/config/permissions/org.lineageos.livedisplay.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/org.lineageos.livedisplay.xml \
     vendor/ancient/config/permissions/privapp-permissions-system-ancient.xml:system/etc/permissions/privapp-permissions-system-ancient.xml \
     vendor/ancient/config/permissions/privapp-permissions-product-ancient.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-product-ancient.xml \
