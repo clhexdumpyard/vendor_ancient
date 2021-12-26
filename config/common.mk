@@ -155,7 +155,7 @@ include vendor/overlays/config.mk
 
 # Variant
 ifeq ($(ANCIENT_GAPPS), true)
-include vendor/gapps/common/common-vendor.mk
+include vendor/gms/products/gms.mk
 else
 include vendor/ancient/config/basicapps.mk
 endif
