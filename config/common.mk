@@ -187,9 +187,9 @@ include vendor/ancient/config/packages.mk
 # Plugins
 #include packages/apps/Plugins/plugins.mk
 
-ifeq ($(EXTRA_FOD_ANIMATIONS),true)
+ifeq ($(EXTRA_UDFPS_ANIMATIONS),true)
 PRODUCT_PACKAGES += \
-    FodAnimationResources
+    UdfpsResources
 endif
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
