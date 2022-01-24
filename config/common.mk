@@ -97,15 +97,15 @@ PRODUCT_COPY_FILES += \
     vendor/ancient/config/permissions/custom-power-whitelist.xml:system/etc/sysconfig/custom-power-whitelist.xml
 
 # Face Unlock
-TARGET_FACE_UNLOCK_SUPPORTED ?= true
-ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
-PRODUCT_PACKAGES += \
-    FaceUnlockService
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.face_unlock_service.enabled=$(TARGET_FACE_UNLOCK_SUPPORTED)
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
-endif
+#TARGET_FACE_UNLOCK_SUPPORTED ?= true
+#ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
+#PRODUCT_PACKAGES += \
+#    FaceUnlockService
+#PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+#    ro.face_unlock_service.enabled=$(TARGET_FACE_UNLOCK_SUPPORTED)
+#PRODUCT_COPY_FILES += \
+#    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
+#endif
 
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
@@ -148,16 +148,16 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     NexusLauncherRelease
 
 # Branding
-include vendor/ancient/config/branding.mk
+$(call inherit-product, vendor/ancient/config/branding.mk)
 
 # Overlays
-include vendor/overlays/config.mk
+$(call inherit-product, vendor/overlays/config.mk)
 
 # Variant
 ifeq ($(ANCIENT_GAPPS), true)
-include vendor/gms/products/gms.mk
+$(call inherit-product, vendor/gms/products/gms.mk)
 else
-include vendor/ancient/config/basicapps.mk
+$(call inherit-product, vendor/ancient/config/basicapps.mk)
 endif
 
 # Disable touch video heatmap to reduce latency, motion jitter, and CPU usage
@@ -169,23 +169,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
 
-# Customization
-#include vendor/google-customization/config.mk
-
 # Pixelstyle
-include vendor/pixelstyle/config.mk
+$(call inherit-product, vendor/pixelstyle/config.mk)
 
 # Prebuilts
-include vendor/prebuilts/config.mk
-
-# Fonts
-include vendor/ancient/prebuilt/common/fonts/fonts.mk
+$(call inherit-product, vendor/prebuilts/config.mk)
 
 # Packages
-include vendor/ancient/config/packages.mk
-
-# Plugins
-#include packages/apps/Plugins/plugins.mk
+$(call inherit-product, vendor/ancient/config/packages.mk)
 
 ifeq ($(EXTRA_UDFPS_ANIMATIONS),true)
 PRODUCT_PACKAGES += \

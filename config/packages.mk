@@ -60,7 +60,7 @@ PRODUCT_PACKAGES += \
 
 ifeq ($(ANCIENT_WEEABO), true)
 PRODUCT_PACKAGES += \
- #   weebstyle
+#   weebstyle
 else
 PRODUCT_PACKAGES += \
     OmniStyle
