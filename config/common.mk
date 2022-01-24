@@ -169,6 +169,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
 
+# Fonts
+$(call inherit-product-if-exists, vendor/fonts/config.mk)
+
 # Pixelstyle
 $(call inherit-product, vendor/pixelstyle/config.mk)
 
