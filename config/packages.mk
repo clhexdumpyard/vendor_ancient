@@ -53,6 +53,7 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     TouchGestures \
     Recorder \
+    RepainterServicePriv \
     SoftAPManager \
     StitchImage \
     OmniJaws \
