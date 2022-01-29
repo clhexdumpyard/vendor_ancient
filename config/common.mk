@@ -118,8 +118,10 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 # Enable ccache
 USE_SYSTEM_CCACHE := true
 
+ifneq ($(TARGET_BUILD_VARIANT),user)
 # Sepolicy
 SELINUX_IGNORE_NEVERALLOWS := true
+endif
 
 # Charger
 PRODUCT_PACKAGES += \
