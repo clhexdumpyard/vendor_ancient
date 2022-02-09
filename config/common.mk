@@ -74,7 +74,7 @@ PRODUCT_COPY_FILES += \
 
 # AncientOS-specific init rc file
 PRODUCT_COPY_FILES += \
-    vendor/ancient/prebuilt/common/etc/init/init.ancient-system.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.ancient-system.rc \
+    vendor/ancient/prebuilt/common/etc/init/init.ancient-system_ext.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.ancient-system_ext.rc \
     vendor/ancient/prebuilt/common/etc/init/init.ancient-ssh.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.ancient-ssh.rc \
     vendor/ancient/prebuilt/common/etc/init/init.ancient-livedisplay.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.ancient-livedisplay.rc \
     vendor/ancient/prebuilt/common/etc/init/init.ancient-updates.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.ancient-updates.rc
