@@ -59,6 +59,12 @@ endif
 # Pixel permissions
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/ancient/config/permissions/pixel,$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig)
 
+# Quick Tap
+ifeq ($(TARGET_SUPPORTS_QUICK_TAP),true)
+PRODUCT_COPY_FILES += \
+    vendor/ancient/config/permissions/pixel-split/quick_tap.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/quick_tap.xml
+endif
+
 # Some permissions
 PRODUCT_COPY_FILES += \
     vendor/ancient/config/permissions/ancient-sysconfig.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/ancient-sysconfig.xml \
