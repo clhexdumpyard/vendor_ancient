@@ -38,7 +38,7 @@ ifeq ($(ANCIENT_OFFICIAL), true)
       ANCIENT_BUILD_TYPE := Steel
       endif
 # OTA
-ifeq ($(ANCIENT_GAPPS), true)
+ifeq ($(ANCIENT_OFFICIAL), true)
 include vendor/ancient/config/ota.mk
 endif
 
@@ -56,12 +56,15 @@ endif
 TARGET_PRODUCT_SHORT := $(subst ancient_,,$(ANCIENT_BUILD))
 
 ifeq ($(ANCIENT_GAPPS), true)
-ANCIENT_VERSION := AncientOS-S-$(ANCIENT_BASE_EDITION)-$(BUILD_VERSION)-$(ANCIENT_BUILD)-$(ANCIENT_BUILD_TYPE)-$(ANCIENT_BUILD_DATE)-GApps
+ANCIENT_BUILD_VARIANT := GApps
 else
-ANCIENT_VERSION := AncientOS-S-$(ANCIENT_BASE_EDITION)-$(BUILD_VERSION)-$(ANCIENT_BUILD)-$(ANCIENT_BUILD_TYPE)-$(ANCIENT_BUILD_DATE)-Vanilla
+ANCIENT_BUILD_VARIANT := Vanilla
 endif
 
+ANCIENT_VERSION := AncientOS-S-$(ANCIENT_BASE_EDITION)-$(BUILD_VERSION)-$(ANCIENT_BUILD)-$(ANCIENT_BUILD_TYPE)-$(ANCIENT_BUILD_DATE)-$(ANCIENT_BUILD_VARIANT)
+
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.ancient.build_variant=$(ANCIENT_BUILD_VARIANT) \
     ro.ancient.custom.version=$(ANCIENT_VERSION_CUSTOM) \
     ro.ancient.version=$(ANCIENT_VERSION) \
     ro.ancient.build_date=$(ANCIENT_BUILD_DATE) \
