@@ -179,6 +179,8 @@ privileged Google applications in GMS devices.
     <privapp-permissions package="com.android.settings">
         <permission name="lineageos.permission.MANAGE_LIVEDISPLAY" />
         <permission name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS" />
+        <permission name="android.permission.ACCESS_FONT_MANAGER"/>
+        <permission name="android.permission.MANAGE_APP_LOCK" />
     </privapp-permissions>
 
     <privapp-permissions package="com.android.systemui">
@@ -192,10 +194,6 @@ privileged Google applications in GMS devices.
         <permission name="android.permission.REAL_GET_TASKS" />
         <permission name="android.permission.TETHER_PRIVILEGED" />
         <permission name="android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME" />
-    </privapp-permissions>
-
-    <privapp-permissions package="com.android.settings">
-        <permission name="android.permission.ACCESS_FONT_MANAGER"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.apps.wallpaper">
