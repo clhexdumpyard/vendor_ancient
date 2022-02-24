@@ -28,9 +28,19 @@ PRODUCT_PACKAGES += \
     wget \
     zip
 
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/bin/curl \
+    system/bin/getcap \
+    system/bin/setcap
+
 # These packages are excluded from user builds
 PRODUCT_PACKAGES_DEBUG += \
     procmem
+
+ifneq ($(TARGET_BUILD_VARIANT),user)
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/bin/procmem
+endif
 
 # Filesystems tools
 PRODUCT_PACKAGES += \

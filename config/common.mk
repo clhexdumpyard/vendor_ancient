@@ -37,17 +37,20 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.usb.config=none
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.strictmode.disable=true
 endif
 
+# OTA
+ifneq ($(TARGET_BUILD_VARIANT),user)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.ota.allow_downgrade=true
+endif
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/ancient/prebuilt/common/bin/backuptool.sh:$(TARGET_COPY_OUT_SYSTEM)/install/bin/backuptool.sh \
     vendor/ancient/prebuilt/common/bin/backuptool.functions:$(TARGET_COPY_OUT_SYSTEM)/install/bin/backuptool.functions \
     vendor/ancient/prebuilt/common/bin/50-base.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-base.sh
 
-# OTA
-ifneq ($(TARGET_BUILD_VARIANT),user)
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.ota.allow_downgrade=true
-endif
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/addon.d/50-base.sh
 
 ifneq ($(strip $(AB_OTA_PARTITIONS) $(AB_OTA_POSTINSTALL_CONFIG)),)
 PRODUCT_COPY_FILES += \
@@ -55,6 +58,11 @@ PRODUCT_COPY_FILES += \
     vendor/ancient/prebuilt/common/bin/backuptool_ab.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.functions \
     vendor/ancient/prebuilt/common/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
 endif
+
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/bin/backuptool_ab.sh \
+    system/bin/backuptool_ab.functions \
+    system/bin/backuptool_postinstall.sh
 
 # Pixel permissions
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/ancient/config/permissions/pixel,$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig)
