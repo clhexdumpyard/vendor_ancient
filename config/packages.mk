@@ -28,6 +28,10 @@ PRODUCT_PACKAGES += \
     wget \
     zip
 
+# These packages are excluded from user builds
+PRODUCT_PACKAGES_DEBUG += \
+    procmem
+
 # Filesystems tools
 PRODUCT_PACKAGES += \
     fsck.ntfs \
